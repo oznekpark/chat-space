@@ -1,4 +1,38 @@
 .chat-main
-  .chat-main__group-info
-  .chat-main__message-list
-  .chat-main__message-form
+  .chat-main__main-header
+    .chat-main__main-header__top  
+      .chat-main__main-header__top__group-name
+        test
+      %ul.chat-main__main-header__top__member-list
+        Member：
+        %li.chat-main__main-header__top__member-list__first
+          Kenzo
+    = link_to "#", class: "chat-main__main-header__edit-btn" do
+      Edit
+  .chat-main__messages
+    .chat-main__messages__message
+      .chat-main__messages__message__upper-info
+        %p.chat-main__messages__message__upper-info__talker
+          Kenzo
+        %p.chat-main__messages__message__upper-info__data
+          2020/03/25(wed) 11:48:17
+      .chat-main__messages__message__text
+        おはようございます。
+      %img
+    .chat-main__messages__message
+      .chat-main__messages__message__upper-info
+        %p.chat-main__messages__message__upper-info__talker
+          Kenzo
+        %p.chat-main__messages__message__upper-info__data
+          2020/03/25(wed) 11:48:17
+      .chat-main__messages__message__text
+        おはようございます。
+      %img
+  .chat-main__form
+    %form.chat-main__form__form-parents
+      .chat-main__form__form-parents__input-box
+        %input.chat-main__form__form-parents__input-box__sending-content{name: "message[content]", placeholder: "type a message", type: "text"}
+        %label.chat-main__form__form-parents__input-box__put-pic
+          = icon("fas", "image")
+          %input.chat-main__form__form-parents__input-box__put-pic__none{type: "file"}
+      %input.chat-main__form__form-parents__send-btn{type: "submit", name: "commit", value: "Send"}
