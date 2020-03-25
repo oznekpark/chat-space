@@ -1,0 +1,18 @@
+.chat-side
+	.chat-side__side-header
+		.chat-side__side-header__box
+			.chat-side__side-header__box__user-name
+				Kenzo
+			%ul.chat-side__side-header__box__menu
+				%li.chat-side__side-header__box__menu__edit-user
+					= link_to "#", class: "chat-side__side-header__box__menu__edit-user__link" do
+						= icon("fas", "edit")
+				%li.chat-side__side-header__box__menu__new-group
+					= link_to "#", class: "chat-side__side-header__box__menu__new-group__link" do
+						= icon("fas", "cog")
+	.chat-side__groups
+		.chat-side__groups__list
+			.chat-side__groups__list__name
+				techcamp
+			.chat-side__groups__list__news
+				まだメッセージがありません
