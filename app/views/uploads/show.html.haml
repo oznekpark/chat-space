@@ -1,0 +1,17 @@
+%p#notice= notice
+
+%p
+  %b Image:
+  = @upload.image
+  = image_tag @upload.image_url(:thumb) if @upload.image.present?
+
+%p
+  %b Title:
+  = @upload.title
+%p
+  %b Body:
+  = @upload.body
+
+= link_to 'Edit', edit_upload_path(@upload)
+\|
+= link_to 'Back', uploads_path
