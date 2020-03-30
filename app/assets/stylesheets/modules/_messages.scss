@@ -113,6 +113,7 @@ $button-color: #38aef0;
 		background-color: #fafafa;
 		height: calc(100vh - 101px - 90px);
 		padding: 40px 40px;
+		overflow: scroll;
 		&__message {
 			background-color: #fafafa;
 			&__upper-info {
