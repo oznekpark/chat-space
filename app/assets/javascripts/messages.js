@@ -1,5 +1,5 @@
 $(function(){
-	function buildHTML(message) {
+  function buildHTML(message) {
     if (message.text && message.image) {
 			var html = `<div class="chat-main__messages_message">
 										<div class="chat-main__messages__message__upper-info">
