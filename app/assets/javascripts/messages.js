@@ -2,55 +2,54 @@ $(function(){
   function buildHTML(message) {
     if (message.text && message.image) {
 			var html = `<div class="chat-main__messages_message">
-										<div class="chat-main__messages__message__upper-info">
-											<div class="chat-main__messages__message__upper-info__talker">
-											${message.user_name}
-											</div>
-											<div class="chat-main__messages__message__upper-info__data">
-											${message.created_at}
-											</div>
-										</div>
-										<div class="chat-main__messages__message__lower-info">
-											<p class="chat-main__messages__message__lower-info__text">
-											${message.text}
-											</p>
-											<img src ="${message.image}" class="chat-main__messages__message__lower-info__image">
-										</div>
-									</div>`
+				<div class="chat-main__messages__message__upper-info">
+				<div class="chat-main__messages__message__upper-info__talker">
+				${message.user_name}
+				</div>
+				<div class="chat-main__messages__message__upper-info__data">
+				${message.created_at}
+				</div>
+				</div>
+				<div class="chat-main__messages__message__lower-info">
+				<p class="chat-main__messages__message__lower-info__text">
+				${message.text}
+				</p>
+				<img src ="${message.image}" class="chat-main__messages__message__lower-info__image">
+				</div>
+				</div>`
     } else if (message.text) {
 			var html = `<div class="chat-main__messages_message">
-										<div class="chat-main__messages__message__upper-info">
-											<div class="chat-main__messages__message__upper-info__talker">
-											${message.user_name}
-											</div>
-											<div class="chat-main__messages__message__upper-info__data">
-											${message.created_at}
-											</div>
-										</div>
-										<div class="chat-main__messages__message__lower-info">
-											<p class="chat-main__messages__message__lower-info__text">
-											${message.text}
-											</p>
-										</div>
-									</div>`
+				<div class="chat-main__messages__message__upper-info">
+				<div class="chat-main__messages__message__upper-info__talker">
+				${message.user_name}
+				</div>
+				<div class="chat-main__messages__message__upper-info__data">
+				${message.created_at}
+				</div>
+				</div>
+				<div class="chat-main__messages__message__lower-info">
+				<p class="chat-main__messages__message__lower-info__text">
+				${message.text}
+				</p>
+				</div>
+				</div>`
     } else if (message.image) {
 			var html = `<div class="chat-main__messages_message">
-										<div class="chat-main__messages__message__upper-info">
-											<div class="chat-main__messages__message__upper-info__talker">
-											${message.user_name}
-											</div>
-											<div class="chat-main__messages__message__upper-info__data">
-											${message.created_at}
-											</div>
-										</div>
-										<div class="chat-main__messages__message__lower-info">
-											<img src ="${message.image}" class="chat-main__messages__message__lower-info__image">
-										</div>
-									</div>`
+				<div class="chat-main__messages__message__upper-info">
+				<div class="chat-main__messages__message__upper-info__talker">
+				${message.user_name}
+				</div>
+				<div class="chat-main__messages__message__upper-info__data">
+				${message.created_at}
+				</div>
+				</div>
+				<div class="chat-main__messages__message__lower-info">
+				<img src ="${message.image}" class="chat-main__messages__message__lower-info__image">
+				</div>
+				</div>`
     };
     return html;
-  }
-
+	}
   $("#new_message").on("submit", function(e){
 		e.preventDefault();
 		var formData = new FormData(this);
