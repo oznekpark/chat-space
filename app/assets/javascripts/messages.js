@@ -70,7 +70,6 @@ $(function(){
       $('.chat-main__messages').append(html);
       $('form')[0].reset();
       $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
-      // $('.chat-main__form__form-parents__send-btn').prop('disabled', false);
     })
     .fail(function(){
       alert("メッセージ送信に失敗しました");
@@ -92,13 +91,10 @@ $(function(){
     .done(function(messages){
       console.log(messages)
       if (messages.length !== 0){
-        //追加するHTMLの入れ物を作る
         var insertHTML = "";
-        //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
         $.each(messages, function(i, message) {
           insertHTML += buildHTML(message)
         });
-        //メッセージが入ったHTMLに、入れ物ごと追加
         $('.chat-main__messages').append(insertHTML);
         $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
       }
