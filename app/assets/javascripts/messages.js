@@ -89,7 +89,6 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages){
-      console.log(messages)
       if (messages.length !== 0){
         var insertHTML = "";
         $.each(messages, function(i, message) {
@@ -104,7 +103,6 @@ $(function(){
     });
   }
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-    console.log(document.location.href)
     setInterval(reloadMessages, 7000);
   }
 });
