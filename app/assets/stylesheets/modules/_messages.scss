@@ -49,6 +49,7 @@ $button-color: #38aef0;
 	&__groups {
 		background-color: #2f3e51;
 		height: calc(100vh - 100px);
+		overflow: scroll;
 		&__group {
 			text-decoration: none;
 			&__list {
